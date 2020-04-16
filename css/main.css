@@ -87,7 +87,7 @@ h3 {
 /* ---------- page styling ---------- */
 .page {
   display: none;
-  /*min heigh is screen heigh minus height of tab and top bar */
+  /*min height is screen height minus height of tab and top bar */
   min-height: calc(100vh - 110px);
   background: var(--light-grey);
   animation: fadeIn 0.4s;
