@@ -121,4 +121,5 @@ nav a.active {
   font-size: 24px;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
