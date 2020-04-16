@@ -7,12 +7,10 @@ import spaService from "./services/spa.js";
 // Declare and init
 let navbar = new NavBar();
 let homePage = new HomePage();
-
 let statisticsPage = new StatisticsPage();
 
 // init services
 spaService.init();
 
 window.pageChange = () => spaService.pageChange();
-window.statisticsPage = () => statisticsPage.appendCows();
-window.statisticsPage = () => statisticsPage.prepareCowData();
+window.statisticsPage = () => statisticsPage.read();

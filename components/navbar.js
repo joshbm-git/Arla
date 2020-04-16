@@ -8,6 +8,7 @@ export default class NavBar {
       <nav class="tabbar">
         <a href="#home">Home</a>
         <a href="#persons">Persons</a>
+        <a href="#statistics">Statistics</a>
       </nav>
     `;
   }
