@@ -1,0 +1,56 @@
+* {
+  line-height: 1.2;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Arla;
+  src: url(../fonts/ArlaIF_W_Rg.woff);
+}
+
+@font-face {
+  font-family: ArlaBold;
+  src: url(../fonts/ArlaIF_W_Bd.woff);
+}
+
+html {
+  color: #333;
+  display: table;
+  font-family: Arla, Helvetica, Arial, sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 1em 0;
+  font-family: ArlaBold;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin: 2.5em 0 1em;
+  font-family: ArlaBold;
+}
+
+canvas {
+  max-width: 80%;
+  margin: 0 auto 2em auto;
+}
+
+.flexcontainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.statistic {
+  width: 50%;
+  margin: 0;
+}
