@@ -19,3 +19,9 @@ window.pageChange = () => spaService.pageChange();
 window.question1 = () => surveyPage.question1();
 
 window.question2 = () => surveyPage.question2();
+
+window.question3 = () => surveyPage.question3();
+window.question4 = () => surveyPage.question4();
+window.question5 = () => surveyPage.question5();
+window.question6 = () => surveyPage.question6();
+window.question7 = () => surveyPage.question7();

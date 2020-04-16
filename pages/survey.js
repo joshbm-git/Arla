@@ -31,14 +31,14 @@ export default class SurveyPage {
   question1() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
     <div class="grid-top">   
-    <h1>Text Validering</h1>
+    <h1>Hvad hedder du?</h1>
     </div>
         
     <div class="grid-bottom">
     <form name="textForm" onsubmit="question2()">
         Fulde navn: <input type="text" name="fname" required>
  
-        <input type="submit" value="Næste">
+        <input type="submit" value="Næste" id="surveyButton">
         
     </form>
     </div>
@@ -48,19 +48,97 @@ export default class SurveyPage {
   question2() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
     <div class="grid-top">   
-    <h1>Select Validering</h1>
+    <h1>Hvor mange køer har du?</h1>
     </div>
+        
     <div class="grid-bottom">
     <form name="textForm" onsubmit="question3()">
-    <select id="cars" name="cars" required>
-    <option value="">---</option>
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
-  </select>
-    <input type="submit" value="Næste">
-  </form>
-  </div> `;
+        Antal køer: <input type="text" name="fname" required>
+ 
+        <input type="submit" value="Næste" id="surveyButton">
+        
+    </form>
+    </div>
+              `;
+  }
+
+  question3() {
+    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
+    <div class="grid-top">   
+    <h1>Hvor meget spiser dine køer?</h1>
+    </div>
+        
+    <div class="grid-bottom">
+    <form name="textForm" onsubmit="question4()">
+        Kg foder: <input type="text" name="fname" required>
+ 
+        <input type="submit" value="Næste" id="surveyButton">
+        
+    </form>
+    </div>
+              `;
+  }
+
+  question4() {
+    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
+    <div class="grid-top">   
+    <h1>Hvor meget mælk producerer dine køer?</h1>
+    </div>
+        
+    <div class="grid-bottom">
+    <form name="textForm" onsubmit="question5()">
+        Liter mælk: <input type="text" name="fname" required>
+ 
+        <input type="submit" value="Næste" id="surveyButton">
+        
+    </form>
+    </div>
+              `;
+  }
+
+  question5() {
+    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
+    <div class="grid-top">   
+    <h1>Hvor meget benzin bruger du?</h1>
+    </div>
+        
+    <div class="grid-bottom">
+    <form name="textForm" onsubmit="question6()">
+        Liter benzin: <input type="text" name="fname" required>
+ 
+        <input type="submit" value="Næste" id="surveyButton">
+        
+    </form>
+    </div>
+              `;
+  }
+
+  question6() {
+    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
+    <div class="grid-top">   
+    <h1>Hvor meget el bruger du?</h1>
+    </div>
+        
+    <div class="grid-bottom">
+    <form name="textForm" onsubmit="question7()">
+        KW: <input type="text" name="fname" required>
+ 
+        <input type="submit" value="Afslut" id="surveyButton">
+        
+    </form>
+    </div>
+              `;
+  }
+
+  question7() {
+    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
+    <div class="grid-top">   
+    <h1>Tak for din deltagelse!</h1>
+    </div>
+        
+    <div class="grid-bottom"> 
+ 
+    </div>
+              `;
   }
 }
