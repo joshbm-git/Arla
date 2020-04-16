@@ -9,6 +9,7 @@ export default class NavBar {
         <a href="index.html">Home</a>
         <a href="#persons">Persons</a>
         <a href="#survey">Survey</a>
+        
       </nav>
     `;
   }

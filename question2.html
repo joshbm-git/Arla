@@ -1,54 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Working with Firebase and Chart.js</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Get started with HTML, CSS and JavaScript"
+    />
+    <meta name="author" content="Rasmus Cederdorff" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jacob.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Working with Firebase and Chart.js</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Get started with HTML, CSS and JavaScript">
-  <meta name="author" content="Rasmus Cederdorff">
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/jacob.css">
-</head>
+  <body class="app">
+    <!-- tabbar navigation -->
 
+    <!-- main js file -->
+    <section id="survey">
+      <header></header>
+      <nav>
+        <a href="index.html">Forside</a>
+        <a href="statistics.html" class="active">Statistikker</a>
+        <a href="survey.html">Indmeld data</a>
+        <a href="tips.html">Formindsk CO2 </a>
+      </nav>
+      <div class="survey-wrapper">
+        <div class="grid-top">
+          <h1>Hvor mange køer har du?</h1>
+        </div>
 
-<body class="app">
-  <!-- tabbar navigation -->
+        <div class="grid-bottom">
+          <form name="textForm" action="question3.html">
+            Antal køer: <input type="number" name="fname" required />
 
-  <!-- main js file -->
-  <section id="survey">
-    <header>
-    </header>
-    <nav>
-      <a href="index.html" class="active">Forside</a>
-      <a href="statistics.html">Statistikker</a>
-      <a href="survey.html">Indmeld data</a>
-    </nav>
-    <div class="survey-wrapper">
-      <div class="grid-top">
-        <h1>Hvor mange køer har du?</h1>
+            <input type="submit" value="Næste" id="surveyButton" />
+          </form>
+        </div>
       </div>
-
-      <div class="grid-bottom">
-        <form name="textForm" action="question3.html">
-          Antal køer: <input type="number" name="fname" required>
-
-          <input type="submit" value="Næste" id="surveyButton">
-
-        </form>
-      </div>
-    </div>
-  </section>
-  <!-- <section id="content"></section> -->
-  <!-- Firebase App SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
-  <!-- load firebase config -->
-  <script src="js/firebase_config.js"></script>
-  <!-- main js file -->
-  <!-- <script src="js/main.js"></script> -->
-  <!-- <script src="pages/survey.js"></script> -->
-</body>
-
+    </section>
+    <!-- <section id="content"></section> -->
+    <!-- Firebase App SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+    <!-- load firebase config -->
+    <script src="js/firebase_config.js"></script>
+    <!-- main js file -->
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="pages/survey.js"></script> -->
+  </body>
 </html>
