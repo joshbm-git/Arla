@@ -1,0 +1,26 @@
+.survey-wrapper {
+  display: grid;
+  min-height: calc(100vh - 110px);
+  padding: 0 5em 0 5em;
+}
+
+.grid-top,
+.grid-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-top {
+  align-items: center;
+}
+
+.grid-bottom {
+  align-items: flex-end;
+  margin-bottom: 10em;
+}
+
+.nextBtn {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
