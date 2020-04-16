@@ -1,9 +1,4 @@
-export default class SurveyPage {
-  constructor() {
-    this.template();
-  }
-
-  template() {
+  function template() {
     document.querySelector("#app").innerHTML += /*html*/ `
         <section id="survey" class="page">
           <header class="topbar">
@@ -11,43 +6,43 @@ export default class SurveyPage {
           </header>
 
           <div class="survey-wrapper">
-          
-          <div class="grid-top">         
+
+          <div class="grid-top">
           <h3>Spørgsmål til bæredygtigheden af din gård.</h3>
           </div>
-          
-          <div class="grid-bottom">    
+
+          <div class="grid-bottom">
           <button class="nextBtn" onclick="question1();">Videre</button>
           </div>
 
-  
-      
+
+
         </div>
         </section>
 
       `;
   }
 
-  question1() {
+  function question1() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-    <div class="grid-top">   
+    <div class="grid-top">
     <h1>Text Validering</h1>
     </div>
-        
+
     <div class="grid-bottom">
     <form name="textForm" onsubmit="question2()">
         Fulde navn: <input type="text" name="fname" required>
- 
+
         <input type="submit" value="Næste">
-        
+
     </form>
     </div>
               `;
   }
 
-  question2() {
+  function question2() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-    <div class="grid-top">   
+    <div class="grid-top">
     <h1>Select Validering</h1>
     </div>
     <div class="grid-bottom">
@@ -63,4 +58,3 @@ export default class SurveyPage {
   </form>
   </div> `;
   }
-}
