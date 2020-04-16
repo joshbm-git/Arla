@@ -9,8 +9,10 @@
   <meta name="author" content="Rasmus Cederdorff">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/jacob.css">
 </head>
+
 
 <body>
   <header>
@@ -18,6 +20,11 @@
     <h2>Go'dag til dig, Henning.</h2>
     <img src="img/henning.jpg" alt="Henning">
   </header>
+  <nav>
+    <a href="index.html" class="active">Forside</a>
+    <a href="statistics.html">Statistikker</a>
+    <a href="survey.html">Indmeld data</a>
+  </nav>
   <div class="flexcontainer">
     <section class="statistic">
       <h2>Herd - Number of Cows</h2>
@@ -60,6 +67,8 @@
       <p>Her er en lille beskrivelse.</p>
     </section>
   </div>
+  <h2>Klar til at indmelde data for din går?</h2>
+  <a href="survey.html"><button type="button" name="button" class="submitdata">Ja, lad os gå i gang!</button></a>
   <!-- Firebase App SDKs -->
   <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>

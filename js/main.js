@@ -1,4 +1,5 @@
 "use strict";
+
 // ========== GLOBAL VARIABLES ========== //
 const _dataRef = _db.collection("sustainabilityData");
 let _sustainabilityData;
