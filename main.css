@@ -1,13 +1,27 @@
 /* ---------- root variables ---------- */
 :root {
   --green: #006c3a;
-  --light-green: rgb(172, 198, 201);
+  --light-green: #4bb131;
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
 }
 
 /* ---------- general styling ---------- */
+@font-face {
+  font-family: Arla;
+  src: url(../fonts/ArlaIF_W_Rg.woff);
+}
+
+@font-face {
+  font-family: ArlaBold;
+  src: url(../fonts/ArlaIF_W_Bd.woff);
+}
+
+* {
+  font-family: Arla, sans-serif;
+}
+
 html {
   color: var(--text-color-dark);
   font-family: Helvetica, Arial, sans-serif;
@@ -19,17 +33,28 @@ html {
 
 body {
   margin: 0;
+  margin-left: 120px;
 }
 
 h1 {
   font-size: 2em;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-family: ArlaBold, sans-serif;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: ArlaBold, sans-serif;
 }
 
 h3 {
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-size: 1.3em;
+  font-family: ArlaBold, sans-serif;
+  line-height: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1;
 }
 
 /* ---------- tabbar styling ---------- */
@@ -40,15 +65,20 @@ h3 {
   bottom: 0;
   left: 0;
   z-index: 9999;
-  width: 10em;
+  width: 120px;
   padding: 0;
   margin: 0;
 }
 
 .tabbar img {
   width: 100%;
-  background-color: var(--green);
-  margin: 0;
+  max-width: 120px;
+  background: var(--green);
+  margin-bottom: 1em;
+}
+
+.tabbar img:hover {
+  background: radial-gradient(var(--light-green), var(--green));
 }
 
 /* Style the links inside the navigation bar */
@@ -56,31 +86,31 @@ h3 {
   display: block;
   color: var(--text-color-dark);
   text-align: center;
-  padding: 20px 16px;
+  padding: 10px 16px;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.7em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border-left: 5px solid white;
-  margin-bottom: 3em;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  margin-bottom: 2em;
 }
 
 /* Change the color of links on hover */
 .tabbar a:hover {
   color: var(--green);
-  border-left: 5px solid var(--green);
 }
 
 /* Add a color to the active/current link */
 .tabbar a.active {
   color: var(--green);
-  border-left: 5px solid var(--green);
+  border-left: 4px solid var(--green);
 }
 
 .tabbar i {
   width: 100%;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
 }
 
 /* ---------- page styling ---------- */
@@ -88,7 +118,7 @@ h3 {
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
   min-height: calc(100vh - 110px);
-  background: var(--light-grey);
+  background: #eff2f0;
   animation: fadeIn 0.4s;
   /* padding equals height of tabbar and topbar */
   padding: 55px 0;
@@ -224,18 +254,18 @@ input {
   }
 }
 
-.grid-container > article {
+.grid-container>article {
   text-align: center;
   padding: 10px;
 }
 
-.grid-container > article img {
+.grid-container>article img {
   max-width: 300px;
   width: 100%;
   margin-bottom: 1em;
 }
 
-.grid-container > article h3 {
+.grid-container>article h3 {
   font-weight: 200;
 }
 
@@ -284,4 +314,52 @@ input {
 
 .mdl-button--primary.mdl-button--primary {
   color: var(--green);
+}
+
+/* Jacob CSS -------------------------------------------------------*/
+.profilePicture {
+  border-radius: 50%;
+  max-width: 140px;
+  box-shadow:
+    0 0 0 5px #fff,
+    0 0 0 8px var(--green);
+  transition: box-shadow 0.2s ease-out;
+}
+
+.profilePicture:hover {
+  border-radius: 50%;
+  max-width: 140px;
+  box-shadow:
+    0 0 0 5px #fff,
+    0 0 0 8px var(--light-green);
+}
+
+.frontPageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4em auto;
+}
+
+.bedrifter {
+  width: 40%;
+  max-width: 600px;
+  margin: 3em auto;
+}
+
+.frontPageContainer {
+  border-radius: 30px;
+  background-color: #fff;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.achievement {
+  margin: 2em;
+}
+
+.achievement img {
+  max-width: 80px;
 }
