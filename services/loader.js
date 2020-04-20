@@ -4,7 +4,7 @@ class LoaderService {
   }
 
   template() {
-    document.querySelector('#app').innerHTML += /*html*/ `
+    document.querySelector('#content').innerHTML += /*html*/ `
       <div id="loader">
         <div class="spinner"></div>
       </div>
@@ -16,7 +16,9 @@ class LoaderService {
     if (show) {
       loader.classList.remove("hide");
     } else {
-      loader.classList.add("hide");
+      setTimeout(() => {
+        loader.classList.add("hide");
+      }, 500);
     }
   }
 
