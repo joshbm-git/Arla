@@ -4,10 +4,10 @@ import HomePage from "./pages/home.js";
 import ChartPage from "./pages/chart.js";
 import ProfilePage from "./pages/profile.js";
 import ChartAddPage from "./pages/chartAdd.js";
+import TipsPage from "./pages/tips.js";
 
 // import your services
 import spaService from "./services/spa.js";
-import TipsPage from "./pages/tips.js";
 import authService from "./services/auth.js";
 
 // Declare and init pages
