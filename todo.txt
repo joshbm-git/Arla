@@ -1,4 +1,0 @@
-Sider:
-- Forside
-- Statistikker
-- spørgeskema

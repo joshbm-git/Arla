@@ -1,17 +1,38 @@
-// import your components, pages and services
-import NavBar from "./components/navbar.js";
+// import your pages
+import LoginPage from "./pages/login.js";
 import HomePage from "./pages/home.js";
-import PersonsPage from "./pages/persons.js";
+import ChartPage from "./pages/chart.js";
+import ProfilePage from "./pages/profile.js";
+import ChartAddPage from "./pages/chartAdd.js";
+
+// import your services
 import spaService from "./services/spa.js";
 import TipsPage from "./pages/tips.js";
+import authService from "./services/auth.js";
 
-// Declare and init
-let navbar = new NavBar();
+// Declare and init pages
+let loginPage = new LoginPage();
 let homePage = new HomePage();
 let personsPage = new PersonsPage();
 let TipsPage = new TipsPage();
+let chartPage = new ChartPage();
+let profilePage = new ProfilePage();
+let chartAddPage = new ChartAddPage();
 
-// init services
+// init services 
 spaService.init();
+authService.init();
 
-window.pageChange = () => spaService.pageChange();
+// ready called when user is authenticated 
+// and the app is ready!
+window.ready = () => {
+    console.log("READY");
+    chartPage.init();
+    chartAddPage.init();
+}
+
+// onclick handlers
+window.logout = () => profilePage.logout();
+window.updateUser = () => profilePage.updateUser();
+window.previewImage = (file, previewId) => profilePage.previewImage(file, previewId);
+window.addDataset = () => chartAddPage.addDataset();
