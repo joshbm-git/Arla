@@ -4,7 +4,7 @@ import HomePage from "./pages/home.js";
 import ChartPage from "./pages/chart.js";
 import ProfilePage from "./pages/profile.js";
 import ChartAddPage from "./pages/chartAdd.js";
-import TipsPage from "./pages/tips.js";
+// import TipsPage from "./pages/tips.js";
 
 // import your services
 import spaService from "./services/spa.js";
@@ -14,7 +14,7 @@ import authService from "./services/auth.js";
 let loginPage = new LoginPage();
 let homePage = new HomePage();
 let personsPage = new PersonsPage();
-let TipsPage = new TipsPage();
+// let TipsPage = new TipsPage();
 let chartPage = new ChartPage();
 let profilePage = new ProfilePage();
 let chartAddPage = new ChartAddPage();

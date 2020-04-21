@@ -1,16 +1,16 @@
-export default class TipsPage {
+// export default class TipsPage {
 
-    constructor() {
-        this.template();
-    }
+//     constructor() {
+//         this.template();
+//     }
 
-    template() {
-        document.getElementById("content").innerHTML += /*html*/ `
-          <section id="tips" class="page">
-            <h3>SPA Template Modules Pages</h3>
-            <p>My Single Page Web App Template</p>
-          </section>
-        `;
-    }
+//     template() {
+//         document.getElementById("content").innerHTML += /*html*/ `
+//           <section id="tips" class="page">
+//             <h3>SPA Template Modules Pages</h3>
+//             <p>My Single Page Web App Template</p>
+//           </section>
+//         `;
+//     }
 
-}
+// }
