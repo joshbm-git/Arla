@@ -13,7 +13,6 @@ import authService from "./services/auth.js";
 // Declare and init pages
 let loginPage = new LoginPage();
 let homePage = new HomePage();
-let personsPage = new PersonsPage();
 // let TipsPage = new TipsPage();
 let chartPage = new ChartPage();
 let profilePage = new ProfilePage();
