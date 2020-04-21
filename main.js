@@ -16,20 +16,30 @@ let chartPage = new ChartPage();
 let profilePage = new ProfilePage();
 let chartAddPage = new ChartAddPage();
 
-// init services 
+// init services
 spaService.init();
 authService.init();
 
-// ready called when user is authenticated 
+// ready called when user is authenticated
 // and the app is ready!
 window.ready = () => {
-    console.log("READY");
-    chartPage.init();
-    chartAddPage.init();
-}
+  console.log("READY");
+  chartPage.init();
+  chartAddPage.init();
+};
 
 // onclick handlers
 window.logout = () => profilePage.logout();
 window.updateUser = () => profilePage.updateUser();
-window.previewImage = (file, previewId) => profilePage.previewImage(file, previewId);
+window.previewImage = (file, previewId) =>
+  profilePage.previewImage(file, previewId);
 window.addDataset = () => chartAddPage.addDataset();
+
+window.pageChange = () => spaService.pageChange();
+window.question1 = () => surveyPage.question1();
+window.question2 = () => surveyPage.question2();
+window.question3 = () => surveyPage.question3();
+window.question4 = () => surveyPage.question4();
+window.question5 = () => surveyPage.question5();
+window.question6 = () => surveyPage.question6();
+window.question7 = () => surveyPage.question7();
