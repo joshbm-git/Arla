@@ -1,6 +1,9 @@
 export default class SurveyPage {
   constructor() {
     this.template();
+    this.numOfQuestions = 10;
+    this.currentQuestion = 1;
+    this.width = 100 / this.numOfQuestions;
   }
 
   template() {
@@ -16,7 +19,7 @@ export default class SurveyPage {
         </div>
         
         <div class="grid-bottom">    
-        <button class="nextBtn" onclick="question1();">Videre</button>
+        <button class="nextBtn" onclick="question1();progress();">Videre</button>
         </div>
 
       </div>
@@ -26,24 +29,27 @@ export default class SurveyPage {
     </section>
     `;
   }
-
-  question1() {
-    //MOVE THE BAR
+  //MOVE THE BAR
+  progress() {
     if (currentQuestion < numOfQuestions) {
       currentQuestion++;
-      width = width + 100 / numOfQuestions;
+      width = width + 100 / numOfQuestions; //PROGRESS BAR GROWTH
     } else {
       currentQuestion = numOfQuestions;
     }
 
-    //APPEND TO DOM
+    let loadBar = document.getElementById("loadBar");
+    loadBar.style.width = width + "%";
+  }
+
+  question1() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
       <div class="grid-top">   
       <h1>Hvad hedder du?</h1>
       </div>
           
       <div class="grid-bottom">
-      <form name="textForm" onsubmit="question2()">
+      <form name="textForm" onsubmit="question2();progress();">
           Fulde navn: <input type="text" name="fname" required>
    
           <input type="submit" value="Næste" id="surveyButton">
@@ -66,12 +72,13 @@ export default class SurveyPage {
       </div>
           
       <div class="grid-bottom">
-      <form name="textForm" onsubmit="question3()">
+      <form name="textForm" onsubmit="question3()progress();">
           Antal køer: <input type="text" name="fname" required>
    
           <input type="submit" value="Næste" id="surveyButton">
           
       </form>
+      
       </div>
                 `;
   }
@@ -83,7 +90,7 @@ export default class SurveyPage {
       </div>
           
       <div class="grid-bottom">
-      <form name="textForm" onsubmit="question4()">
+      <form name="textForm" onsubmit="question4()progress();">
           Kg foder: <input type="text" name="fname" required>
    
           <input type="submit" value="Næste" id="surveyButton">
@@ -100,7 +107,7 @@ export default class SurveyPage {
       </div>
           
       <div class="grid-bottom">
-      <form name="textForm" onsubmit="question5()">
+      <form name="textForm" onsubmit="question5()progress();">
           Liter mælk: <input type="text" name="fname" required>
    
           <input type="submit" value="Næste" id="surveyButton">
@@ -117,7 +124,7 @@ export default class SurveyPage {
       </div>
           
       <div class="grid-bottom">
-      <form name="textForm" onsubmit="question6()">
+      <form name="textForm" onsubmit="question6()progress();">
           Liter benzin: <input type="text" name="fname" required>
    
           <input type="submit" value="Næste" id="surveyButton">
@@ -134,7 +141,7 @@ export default class SurveyPage {
       </div>
           
       <div class="grid-bottom">
-      <form name="textForm" onsubmit="question7()">
+      <form name="textForm" onsubmit="question7()progress();">
           KW: <input type="text" name="fname" required>
    
           <input type="submit" value="Afslut" id="surveyButton">

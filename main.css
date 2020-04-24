@@ -285,3 +285,28 @@ input {
 .mdl-button--primary.mdl-button--primary {
   color: var(--green);
 }
+
+/* ---------- SURVEY STYLING SANDER ---------- */
+
+#progressBar {
+  background-color: rgb(225, 225, 225);
+  width: 60%;
+  height: 50px;
+  margin: 75px auto;
+  border-radius: 50px;
+  border: solid 5px grey;
+}
+
+#loadBar {
+  background: linear-gradient(
+    to bottom,
+    rgb(50, 220, 20) 0%,
+    rgb(50, 220, 20) 50%,
+    #000000 50%,
+    rgb(50, 200, 20) 50%,
+    rgb(50, 200, 20) 100%
+  );
+  height: 50px;
+  width: 0%;
+  border-radius: 50px;
+}

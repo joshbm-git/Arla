@@ -45,3 +45,4 @@ window.question4 = () => surveyPage.question4();
 window.question5 = () => surveyPage.question5();
 window.question6 = () => surveyPage.question6();
 window.question7 = () => surveyPage.question7();
+//window.progress = () => surveyPage.progress();
