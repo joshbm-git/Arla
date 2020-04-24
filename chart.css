@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#charts h2 {
+  padding-top: 2em;
+}
+
+#chartsInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3em;
+}
+.chart-container {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+
+  margin-bottom: 5em;
+}
+
+#chartsInner .chart-container {
+  width: 75%;
+}

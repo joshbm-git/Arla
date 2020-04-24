@@ -1,7 +1,7 @@
 /* ---------- root variables ---------- */
 :root {
   --green: #006c3a;
-  --light-green: rgb(172, 198, 201);
+  --light-green: #4bb131;
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
@@ -86,12 +86,8 @@ h3 {
 /* ---------- page styling ---------- */
 .page {
   display: none;
-  /*min heigh is screen heigh minus height of tab and top bar */
-  min-height: calc(100vh - 110px);
   background: var(--light-grey);
   animation: fadeIn 0.4s;
-  /* padding equals height of tabbar and topbar */
-  padding: 55px 0;
 }
 
 /* ---------- logo styling ---------- */
