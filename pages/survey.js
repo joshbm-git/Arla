@@ -1,195 +1,297 @@
 export default class SurveyPage {
   constructor() {
     this.template();
-    this.numOfQuestions = 7;
+    this.numOfQuestions = 6;
     this.currentQuestion = 1;
-    this.width = 100 / this.numOfQuestions;
+    this.width = 0;
+    this.grow = 100 / this.numOfQuestions;
   }
 
   template() {
     document.getElementById("content").innerHTML += /*html*/ `
       <section id="survey" class="page">
-      <header class="topbar">
-        <h2>Spørgeskema</h2>
+       <div class="survey-wrapper">
+      <h2>Spørgeskema</h2>
+      
 
-        <div class="survey-wrapper">
-            
-        <div class="grid-top">         
-        <h3>Spørgsmål til bæredygtigheden af din gård.</h3>
-        </div>
-        
-        <div class="grid-bottom">    
-        <button class="nextBtn" onclick="question1();progress();">Videre</button>
-        </div>
 
+      <div class="survey-inner-wrapper">
+      
+      <h3>Spørgsmål til bæredygtigheden af din gård.</h3>
+      
+      <button class="nextBtn" onclick="question1();progress();">Videre</button>
+      
       </div>
-        
-      </header>
- 
+      
+      </div> 
+
     </section>
     `;
   }
-  //MOVE THE BAR
+
   progress() {
-    if (this.currentQuestion < this.numOfQuestions) {
+    if (this.currentQuestion <= this.numOfQuestions) {
       this.currentQuestion++;
-      this.width = this.width + 100 / this.numOfQuestions; //PROGRESS BAR GROWTH
+      this.width += this.grow;
     } else {
       this.currentQuestion = this.numOfQuestions;
     }
+    console.log(this.width);
 
-    let loadBar = document.getElementById("loadBar");
-    loadBar.style.width = this.width + "%";
+    let bar = document.querySelector(".progressBar");
+
+    bar.style.background = `
+      linear-gradient(to right, var(--green) ${this.width}%, var(--light-green) 0% 100%)
+      `;
   }
 
   question1() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Hvad hedder du?</h1>
-      </div>
-          
-      <div class="grid-bottom">
-      <form name="textForm" onsubmit="question2();progress();">
-          Fulde navn: <input type="text" name="fname" required>
-   
-          <input type="submit" value="Næste" id="surveyButton">
-          
-      </form>
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
+    <h2>Svar på spørgsmål</h2>
       
-      </div>
+    <div class="progressBar">
+    <figure>
+    <img src="../images/cow.png">
+    </figure>
+
+    <figure>
+    <img src="../images/tractor.png">
+    </figure>
+
+    <figure>
+    <img src="../images/farm.png">
+    </figure>
+
+    <figure>
+    <img src="../images/rain.png">
+    </figure>
+
+    <figure>
+    <img src="../images/energy.png">
+    </figure>
+
+    <figure>
+    <img src="../images/plants.png">
+    </figure>
+    </div> 
+
+
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Spørgsmål?
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question2();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
                 `;
   }
 
   question2() {
-    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Hvor mange køer har du?</h1>
-      </div>
-          
-      <div class="grid-bottom">
-      <form name="textForm" onsubmit="question3();progress();">
-          Antal køer: <input type="text" name="fname" required>
-   
-          <input type="submit" value="Næste" id="surveyButton">
-          
-      </form>
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
-      
-      </div>
+    document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
+    <h2>Svar på spørgsmål 2</h2>
+
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Fulde navn: 
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question3();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
+
+
                 `;
   }
 
   question3() {
-    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Hvor meget spiser dine køer?</h1>
-      </div>
-          
-      <div class="grid-bottom">
-      <form name="textForm" onsubmit="question4();progress();">
-          Kg foder: <input type="text" name="fname" required>
-   
-          <input type="submit" value="Næste" id="surveyButton">
-          
-      </form>
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
-      </div>
+    document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
+    <h2>Svar på spørgsmål 2</h2>
+
+
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Fulde navn: 
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question4();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
+
+
                 `;
   }
 
   question4() {
-    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Hvor meget mælk producerer dine køer?</h1>
-      </div>
-          
-      <div class="grid-bottom">
-      <form name="textForm" onsubmit="question5();progress();">
-          Liter mælk: <input type="text" name="fname" required>
-   
-          <input type="submit" value="Næste" id="surveyButton">
-          
-      </form>
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
-      </div>
+    document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
+    <h2>Svar på spørgsmål 2</h2>
+
+
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Fulde navn: 
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question5();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
+
+
                 `;
   }
 
   question5() {
-    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Hvor meget benzin bruger du?</h1>
-      </div>
-          
-      <div class="grid-bottom">
-      <form name="textForm" onsubmit="question6();progress();">
-          Liter benzin: <input type="text" name="fname" required>
-   
-          <input type="submit" value="Næste" id="surveyButton">
-          
-      </form>
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
-      </div>
+    document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
+    <h2>Svar på spørgsmål 2</h2>
+
+
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Fulde navn: 
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question6();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
+
+
                 `;
   }
-
   question6() {
-    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Hvor meget el bruger du?</h1>
-      </div>
-          
-      <div class="grid-bottom">
-      <form name="textForm" onsubmit="question7();progress();">
-          KW: <input type="text" name="fname" required>
-   
-          <input type="submit" value="Afslut" id="surveyButton">
-          
-      </form>
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
-      </div>
+    document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
+    <h2>Svar på spørgsmål 2</h2>
+
+
+
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Fulde navn: 
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question7();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
+
+
                 `;
   }
 
   question7() {
-    document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-      <div class="grid-top">   
-      <h1>Tak for din deltagelse!</h1>
-      </div>
-          
-      <div class="grid-bottom"> 
-      <div id="progressBar">
-        <div id="loadBar">
-        </div>
-      </div>
-      <h3>Spørgsmål ${this.currentQuestion} af ${this.numOfQuestions}</h3>
-   
-      </div>
+    document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
+    <h2>Svar på spørgsmål 2</h2>
+
+  
+    <div class="survey-inner-wrapper">
+    
+    <div class="question-type-wrapper">
+    <p class="question-type"></p>
+    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    </div>
+
+    <form name="textForm">
+    Fulde navn: 
+    <div class="top-form-wrapper">
+
+    <input type="text" name="fname" required>
+    </div>
+    
+    <div class="btn-wrapper">
+    <button onclick="" class="btn btn-back">Gå tilbage</button>
+    <button type="button" onclick="question7();progress();" class="btn btn-next">Næste</button>
+    
+    </div>
+    </form>
+
+  </div>
+
+
                 `;
   }
+}
+
+{
 }
