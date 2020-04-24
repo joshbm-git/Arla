@@ -11,15 +11,15 @@ export default class SurveyPage {
     document.getElementById("content").innerHTML += /*html*/ `
       <section id="survey" class="page">
        <div class="survey-wrapper">
-      <h2>Spørgeskema</h2>
+      <h2>Questionnaire</h2>
       
 
 
       <div class="survey-inner-wrapper">
       
-      <h3>Spørgsmål til bæredygtigheden af din gård.</h3>
+      <h3>Please answer these questions for the sustainability of your farm.</h3>
       
-      <button class="nextBtn" onclick="question1();progress();">Videre</button>
+      <button class="nextBtn" onclick="question1();progress();">Next</button>
       
       </div>
       
@@ -47,7 +47,7 @@ export default class SurveyPage {
 
   question1() {
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål</h2>
+    <h2>Questionnaire</h2>
       
     <div class="progressBar">
     <figure>
@@ -80,19 +80,19 @@ export default class SurveyPage {
     
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    <p class="question-number">${this.currentQuestion} / ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Spørgsmål?
+    What is the food consumption in kg of dry matter for each cow per year?
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    <input type="number" placeholder="Kg" name="fname" required>
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question2();progress();" class="btn btn-next">Næste</button>
+    <button onclick="" class="btn btn-back">Back</button>
+    <button type="button" onclick="question2();progress();" class="btn btn-next">Next</button>
     
     </div>
     </form>
@@ -103,30 +103,28 @@ export default class SurveyPage {
 
   question2() {
     document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål 2</h2>
+    
 
-    <div class="survey-inner-wrapper">
     
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    <p class="question-number">${this.currentQuestion} / ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Fulde navn: 
+    What is the milk production in kg for each year per cow?
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    <input type="number" placeholder="Kg" name="fname" required>
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question3();progress();" class="btn btn-next">Næste</button>
+    <button onclick="" class="btn btn-back">Back</button>
+    <button type="button" onclick="question3();progress();" class="btn btn-next">Next</button>
     
     </div>
     </form>
 
-  </div>
 
 
                 `;
@@ -134,31 +132,27 @@ export default class SurveyPage {
 
   question3() {
     document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål 2</h2>
-
-
-    <div class="survey-inner-wrapper">
     
+
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    <p class="question-number">${this.currentQuestion} / ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Fulde navn: 
+    How many cows do you have? 
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    <input type="number" placeholder="No of cows" name="fname" required>
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question4();progress();" class="btn btn-next">Næste</button>
+    <button onclick="" class="btn btn-back">Back</button>
+    <button type="button" onclick="question4();progress();" class="btn btn-next">Next</button>
     
     </div>
     </form>
 
-  </div>
 
 
                 `;
@@ -166,31 +160,27 @@ export default class SurveyPage {
 
   question4() {
     document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål 2</h2>
-
-
-    <div class="survey-inner-wrapper">
+    
     
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    <p class="question-number">${this.currentQuestion} / ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Fulde navn: 
+    How much diesel in kg does your farm comsume per day? 
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    <input type="number" placeholder="Kg" name="fname" required>
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question5();progress();" class="btn btn-next">Næste</button>
+    <button onclick="" class="btn btn-back">Back</button>
+    <button type="button" onclick="question5();progress();" class="btn btn-next">Next</button>
     
     </div>
     </form>
 
-  </div>
 
 
                 `;
@@ -198,63 +188,54 @@ export default class SurveyPage {
 
   question5() {
     document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål 2</h2>
-
-
-    <div class="survey-inner-wrapper">
+    
     
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    <p class="question-number">${this.currentQuestion} / ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Fulde navn: 
+    How much electricity in kWh does your farm comsume on a daily basis? 
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    <input type="number" placeholder="kWh" name="fname" required>
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question6();progress();" class="btn btn-next">Næste</button>
+    <button onclick="" class="btn btn-back">Back</button>
+    <button type="button" onclick="question6();progress();" class="btn btn-next">Next</button>
     
     </div>
     </form>
 
-  </div>
-
+  
 
                 `;
   }
   question6() {
     document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål 2</h2>
-
-
-
-    <div class="survey-inner-wrapper">
+    
     
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
+    <p class="question-number">${this.currentQuestion} / ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Fulde navn: 
+    How self-sufficient are you in feed?
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    <input type="number" placeholder="% of dry matter" name="fname" required>
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question7();progress();" class="btn btn-next">Næste</button>
+    <button onclick="" class="btn btn-back">Back</button>
+    <button type="button" onclick="question7();progress();" class="btn btn-next">Next</button>
     
     </div>
     </form>
 
-  </div>
 
 
                 `;
@@ -262,31 +243,26 @@ export default class SurveyPage {
 
   question7() {
     document.querySelector(".survey-inner-wrapper").innerHTML = /*html*/ `
-    <h2>Svar på spørgsmål 2</h2>
-
-  
-    <div class="survey-inner-wrapper">
     
+  
     <div class="question-type-wrapper">
     <p class="question-type"></p>
-    <p class="question-number">${this.currentQuestion} af ${this.numOfQuestions}</p>
     </div>
 
     <form name="textForm">
-    Fulde navn: 
+    <h3>Thank you for your parcitipation in making the world sustainable!</h3>
     <div class="top-form-wrapper">
 
-    <input type="text" name="fname" required>
+    
     </div>
     
     <div class="btn-wrapper">
-    <button onclick="" class="btn btn-back">Gå tilbage</button>
-    <button type="button" onclick="question7();progress();" class="btn btn-next">Næste</button>
+    
     
     </div>
     </form>
 
-  </div>
+
 
 
                 `;
