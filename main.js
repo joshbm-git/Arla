@@ -8,6 +8,7 @@ import ChartAddPage from "./pages/chartAdd.js";
 // import your services
 import spaService from "./services/spa.js";
 import authService from "./services/auth.js";
+import SurveyPage from "./pages/survey.js";
 
 // Declare and init pages
 let loginPage = new LoginPage();
@@ -15,6 +16,7 @@ let homePage = new HomePage();
 let chartPage = new ChartPage();
 let profilePage = new ProfilePage();
 let chartAddPage = new ChartAddPage();
+let surveyPage = new SurveyPage();
 
 // init services
 spaService.init();
