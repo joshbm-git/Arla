@@ -4,31 +4,39 @@ export default class SurveyPage {
   }
 
   template() {
-    document.querySelector("#app").innerHTML += /*html*/ `
-          <section id="survey" class="page">
-            <header class="topbar">
-              <h2>Spørgeskema</h2>
-            </header>
-  
-            <div class="survey-wrapper">
+    document.getElementById("content").innerHTML += /*html*/ `
+      <section id="profile" class="page">
+      <header class="topbar">
+        <h2>Spørgeskema</h2>
+
+        <div class="survey-wrapper">
             
-            <div class="grid-top">         
-            <h3>Spørgsmål til bæredygtigheden af din gård.</h3>
-            </div>
-            
-            <div class="grid-bottom">    
-            <button class="nextBtn" onclick="question1();">Videre</button>
-            </div>
-  
-    
+        <div class="grid-top">         
+        <h3>Spørgsmål til bæredygtigheden af din gård.</h3>
+        </div>
         
-          </div>
-          </section>
-  
-        `;
+        <div class="grid-bottom">    
+        <button class="nextBtn" onclick="question1();">Videre</button>
+        </div>
+
+      </div>
+        
+      </header>
+ 
+    </section>
+    `;
   }
 
   question1() {
+    //MOVE THE BAR
+    if (currentQuestion < numOfQuestions) {
+      currentQuestion++;
+      width = width + 100 / numOfQuestions;
+    } else {
+      currentQuestion = numOfQuestions;
+    }
+
+    //APPEND TO DOM
     document.querySelector(".survey-wrapper").innerHTML = /*html*/ `
       <div class="grid-top">   
       <h1>Hvad hedder du?</h1>
@@ -41,6 +49,12 @@ export default class SurveyPage {
           <input type="submit" value="Næste" id="surveyButton">
           
       </form>
+      <div id="progressBar">
+        <div id="loadBar">
+        </div>
+      </div>
+      <h3>Spørgsmål ${currentQuestion} af ${numOfQuestions}</h3>
+      
       </div>
                 `;
   }
