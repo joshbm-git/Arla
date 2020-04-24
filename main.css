@@ -25,6 +25,7 @@ h1 {
   font-size: 2em;
   font-weight: 300;
   letter-spacing: 3px;
+  padding-bottom: 2em;
 }
 
 h3 {
@@ -285,3 +286,5 @@ input {
 .mdl-button--primary.mdl-button--primary {
   color: var(--green);
 }
+
+
