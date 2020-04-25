@@ -1,0 +1,95 @@
+/* Jacob CSS -------------------------------------------------------*/
+.profilePicture {
+  margin: auto 0;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 140px;
+  max-height: 140px;
+  box-shadow:
+    0 0 0 5px #fff,
+    0 0 0 8px var(--green);
+  transition: box-shadow 0.2s ease-out;
+}
+
+.profilePicture:hover {
+  border-radius: 50%;
+  max-width: 140px;
+  box-shadow:
+    0 0 0 5px #fff,
+    0 0 0 8px var(--light-green);
+}
+
+.frontPageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em auto;
+}
+
+.bedrifter {
+  width: 40%;
+  max-width: 600px;
+  margin: 3em auto;
+}
+
+.frontPageContainer {
+  border-radius: 30px;
+  background-color: #fff;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.achievement {
+  width: 38%;
+  margin: 2em 1.5em;
+}
+
+.achievement img {
+  max-width: 80px;
+}
+
+.welcome {
+  width: 100%;
+  text-align: center;
+  margin: 3em auto 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.counter-thingy {
+  width: 100%;
+  max-width: 200px;
+  margin: auto 2em;
+}
+
+.counter-thingy p {
+  font-size: 30px;
+  font-family: ArlaBold;
+  margin: 0.5em;
+}
+
+.counter-icon {
+  max-width: 50px;
+  margin: 0 4em;
+}
+
+.stor-knap {
+  padding: 1em 3em;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: ArlaBold;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-out;
+  margin-bottom: 4em;
+}
+
+.stor-knap:hover {
+  background-color: var(--light-green);
+  cursor: pointer;
+}
