@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <!-- main styles  -->
   <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="jacob.css" />
+  <link rel="stylesheet" href="chart.css" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   <script src="https://kit.fontawesome.com/6c7b5cd90a.js" crossorigin="anonymous"></script>
 </head>
@@ -19,17 +19,15 @@
 <body class="app">
   <!-- tabbar navigation -->
   <nav id="tabbar" class="tabbar hide">
-    <img src="/images/ARLA_LOGO/ARLA_LOGO_DIGITAL/Arla_Logo_White_Large_Box.png" class="menu-logo" alt="ARLA Plusgården Logo" />
-    <a href="#home"><i class="fas fa-home"></i>Hjem</a>
-    <a href="#charts"><i class="far fa-chart-bar"></i>Stats</a>
-    <a href="#survey"><i class="fas fa-tasks"></i>Indmeld</a>
+    <img src="/images/ARLA_LOGO/ARLA_LOGO_DIGITAL/Arla_Logo_White_Large_Box.png" alt="" />
+    <a href="#home"><i class="fas fa-home"></i>Forside</a>
+    <a href="#charts"><i class="far fa-chart-bar"></i>Statistikker</a>
+    <a href="#survey"><i class="fas fa-tasks"></i>Indmeld data</a>
     <a href="#tips"><i class="fas fa-info-circle"></i>Tips</a>
     <a href="#chartCompare">Add Dataset</a>
     <a href="#profile">Profile</a>
   </nav>
-  <section id="content">
-
-  </section>
+  <section id="content"></section>
 
   <!-- Loding firebase libraries: firebase, auth, firestore & firebase ui -->
   <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>

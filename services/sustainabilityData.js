@@ -26,20 +26,27 @@ class SustainabilityDataService {
   // prepares all the data for the charts
   prepareData(sustainabilityData) {
     let years = [];
-    let numberOfCows = [];
-    let milkProduction = [];
+    let diesel = [];
+    let el = [];
+    let methane = [];
+    let feed = [];
     let carbonFootprint = [];
+
     for (const dataObject of sustainabilityData) {
       // looping through all data and pushing to arrays
       years.push(dataObject.year);
-      numberOfCows.push(dataObject.herdYearCows);
-      milkProduction.push(dataObject.herdMilkProduction);
+      diesel.push(dataObject.dieselMilk);
+      el.push(dataObject.elMilk);
+      methane.push(dataObject.meMilk);
+      feed.push(dataObject.feedMilk);
       carbonFootprint.push(dataObject.carbonFootprintWholeFarm);
     }
     return {
       years,
-      numberOfCows,
-      milkProduction,
+      diesel,
+      el,
+      methane,
+      feed,
       carbonFootprint,
     };
   }
