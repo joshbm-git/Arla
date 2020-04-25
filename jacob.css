@@ -35,7 +35,7 @@
   border-radius: 30px;
   background-color: #fff;
   width: 100%;
-  margin: auto;
+  margin: 2em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -63,6 +63,7 @@
   width: 100%;
   max-width: 200px;
   margin: auto 2em;
+  display: none;
 }
 
 .counter-thingy p {
@@ -86,7 +87,7 @@
   border: none;
   border-radius: 4px;
   transition: background-color 0.2s ease-out;
-  margin-bottom: 4em;
+  margin: 2em 2em 4em 2em;
 }
 
 .stor-knap:hover {
@@ -94,9 +95,17 @@
   cursor: pointer;
 }
 
+.chart-containerFront {
+  margin: 2em;
+}
+
 /* MEDIA QUERY 1120px */
 @media only screen and (min-width: 1120px) {
   .bedrifter {
     width: 40%;
+  }
+
+  .counter-thingy {
+    display: block;
   }
 }

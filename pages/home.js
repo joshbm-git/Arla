@@ -22,26 +22,15 @@ export default class HomePage {
       <div class="bedrifter">
       <h2>Statistics</h2>
       <article class="frontPageContainer">
-        <section class="achievement">
-          <img src="images/award-placeholder.png" alt="ARLA Achievement">
-          <h3>Achievement</h3>
-          <p>A little description.</p>
-        </section>
-        <section class="achievement">
-          <img src="images/award-placeholder.png" alt="ARLA Achievement">
-          <h3>Achievement</h3>
-          <p>A little description.</p>
-        </section>
-        <section class="achievement">
-          <img src="images/award-placeholder.png" alt="ARLA Achievement">
-          <h3>Achievement</h3>
-          <p>A little description.</p>
-        </section>
-        <section class="achievement">
-          <img src="images/award-placeholder.png" alt="ARLA Achievement">
-          <h3>Achievement</h3>
-          <p>A little description.</p>
-        </section>
+      <article class="chart-containerFront">
+      <h3>Carbon Footprint</h3>
+      <canvas id="carbonFootprint"></canvas>
+      </article>
+
+      <article class="chart-containerFront">
+        <h3>Diesel - kg CO2 per kg milk</h3>
+        <canvas id="diesel"></canvas>
+        </article>
       </article>
             </div>
               <div class="bedrifter">
@@ -49,23 +38,23 @@ export default class HomePage {
                     <article class="frontPageContainer">
                       <section class="achievement">
                         <img src="images/award-placeholder.png" alt="ARLA Achievement">
-                        <h3>Here's to five more.</h3>
+                        <h3>Here's to five more</h3>
                         <p>Reduce your farms carbon footprint every year for five years.</p>
                       </section>
                       <section class="achievement">
                         <img src="images/award-placeholder.png" alt="ARLA Achievement">
-                        <h3>Achievement</h3>
-                        <p>A little description.</p>
+                        <h3>Slice it in half</h3>
+                        <p>Reduce your overall carbon footprint by half in a single year.</p>
                       </section>
                       <section class="achievement">
                         <img src="images/award-placeholder.png" alt="ARLA Achievement">
-                        <h3>Achievement</h3>
-                        <p>A little description.</p>
+                        <h3>Methaniac</h3>
+                        <p>Use less than 0.300 kg methane per kg milk in a year.</p>
                       </section>
                       <section class="achievement">
                         <img src="images/award-placeholder.png" alt="ARLA Achievement">
-                        <h3>Achievement</h3>
-                        <p>A little description.</p>
+                        <h3>Minimized electricity</h3>
+                        <p>Use a small amount of power for your farm during a one-year period.</p>
                       </section>
                     </article>
       </div>
