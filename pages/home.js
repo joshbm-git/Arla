@@ -37,22 +37,22 @@ export default class HomePage {
                     <h2>Latest achievements</h2>
                     <article class="frontPageContainer">
                       <section class="achievement">
-                        <img src="images/award-placeholder.png" alt="ARLA Achievement">
+                        <img src="images/trophy-5years.png" alt="ARLA Achievement">
                         <h3>Here's to five more</h3>
                         <p>Reduce your farms carbon footprint every year for five years.</p>
                       </section>
                       <section class="achievement">
-                        <img src="images/award-placeholder.png" alt="ARLA Achievement">
+                        <img src="images/trophy-sliceit.png" alt="ARLA Achievement">
                         <h3>Slice it in half</h3>
                         <p>Reduce your overall carbon footprint by half in a single year.</p>
                       </section>
                       <section class="achievement">
-                        <img src="images/award-placeholder.png" alt="ARLA Achievement">
+                        <img src="images/trophy-methane.png" alt="ARLA Achievement">
                         <h3>Methaniac</h3>
                         <p>Use less than 0.300 kg methane per kg milk in a year.</p>
                       </section>
                       <section class="achievement">
-                        <img src="images/award-placeholder.png" alt="ARLA Achievement">
+                        <img src="images/trophy-power.png" alt="ARLA Achievement">
                         <h3>Minimized electricity</h3>
                         <p>Use a small amount of power for your farm during a one-year period.</p>
                       </section>
