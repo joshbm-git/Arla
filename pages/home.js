@@ -24,12 +24,12 @@ export default class HomePage {
       <article class="frontPageContainer">
       <article class="chart-containerFront">
       <h3>Carbon Footprint</h3>
-      <canvas id="carbonFootprint"></canvas>
+      <canvas id="carbonFootprintHome"></canvas>
       </article>
 
       <article class="chart-containerFront">
         <h3>Diesel - kg CO2 per kg milk</h3>
-        <canvas id="diesel"></canvas>
+        <canvas id="dieselHome"></canvas>
         </article>
       </article>
             </div>

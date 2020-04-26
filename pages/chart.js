@@ -13,10 +13,12 @@ export default class ChartPage {
     let data = await sustainabilityDataService.getPreparedDataByUid(uid); // getting prepared data from the service
     // call append functions with the dataset: data
     this.appendDiesel(data);
+    this.appendDieselHome(data);
     this.appendEl(data);
     this.appendFeed(data);
     this.appendMethane(data);
     this.appendCarbonFootprint(data);
+    this.appendCarbonFootprintHome(data);
   }
 
   template() {
@@ -82,9 +84,55 @@ export default class ChartPage {
   }
 
   //appending the chart
+  appendCarbonFootprintHome(data) {
+    // generate chart
+    let chartContainer = document.getElementById("carbonFootprintHome");
+    let chart = new Chart(chartContainer, {
+      type: "bar",
+      data: {
+        datasets: [
+          {
+            data: data.carbonFootprint,
+            label: "Carbon Footprint Whole Farm",
+            fill: false,
+            borderColor: "#006c3a",
+            backgroundColor: "#006c3a",
+            hoverBorderColor: "#4bb131",
+            hoverBackgroundColor: "#4bb131",
+          },
+        ],
+        labels: data.years,
+      },
+    });
+  }
+
+  //appending the chart
   appendDiesel(data) {
     // generate chart
     let chartContainer = document.getElementById("diesel");
+    let chart = new Chart(chartContainer, {
+      type: "bar",
+      data: {
+        datasets: [
+          {
+            data: data.diesel,
+            label: "Diesel",
+            fill: false,
+            borderColor: "#7d5dab",
+            backgroundColor: "#7d5dab",
+            hoverBorderColor: "#0b43aa",
+            hoverBackgroundColor: "#0b43aa",
+          },
+        ],
+        labels: data.years,
+      },
+    });
+  }
+
+  //appending the chart
+  appendDieselHome(data) {
+    // generate chart
+    let chartContainer = document.getElementById("dieselHome");
     let chart = new Chart(chartContainer, {
       type: "bar",
       data: {
