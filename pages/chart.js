@@ -27,7 +27,7 @@ export default class ChartPage {
     </header>
         <section id="chartsInner">
 
-      <article class="chart-container">
+      <article class="chart-container"> 
       <h3>Carbon Footprint</h3>
       <canvas id="carbonFootprint"></canvas>
       </article>
@@ -36,7 +36,7 @@ export default class ChartPage {
         <h3>Diesel - kg CO2 per kg milk</h3>
         <canvas id="diesel"></canvas>
         </article>
-
+      
         <article class="chart-container">
         <h3>Electricity and heating - kg CO2 per kg milk</h3>
         <canvas id="el"></canvas>
@@ -174,7 +174,7 @@ export default class ChartPage {
   }
 }
 
-/*
+/* 
     this.appendCowsChart(data);
     this.appendMilkProduction(data);
 //appending the chart
