@@ -535,3 +535,77 @@ h1 {
     padding: 3em;
   }
 }
+
+/* ---------- Sander CSS ---------- */
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 1em;
+  background: linear-gradient(
+    to right,
+    var(--green) 20%,
+    var(--light-green) 0% 100%
+  );
+}
+
+.progressBar figure {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.survey-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.survey-inner-wrapper {
+  background: white;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 2em;
+}
+
+.top-form-wrapper,
+.btn-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.top-form-wrapper {
+  padding: 0;
+}
+
+.top-form-wrapper input {
+  width: 100%;
+  margin: 1em 0;
+  border-radius: 5px;
+}
+
+.survey-wrapper .btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.survey-wrapper .btn {
+  width: 12.5em;
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  color: var(--text-color-light);
+  background-color: var(--green);
+}
+
+.survey-wrapper .btn-back {
+  background-color: grey;
+}
+
+.question-type-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
