@@ -1,13 +1,12 @@
 export default class TipsPage {
+  constructor() {
+    this.template();
+  }
 
-    constructor() {
-        this.template();
-    }
-
-    template() {
-        document.getElementById("content").innerHTML += /*html*/ `
+  template() {
+    document.getElementById("content").innerHTML += /*html*/ `
           <section id="tips" class="page">
-            <h1>Sådan kan du formindske CO2 forbrug!</h1>
+            <h1>Here's how you can decrease CO2 emission!</h1>
             <div id="tipsInfo">
             
             <div class="tipsWrapper">
@@ -74,6 +73,5 @@ export default class TipsPage {
             </div>
           </section>
         `;
-    }
-
+  }
 }
