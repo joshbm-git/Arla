@@ -9,12 +9,12 @@ export default class HomePage {
       <h2>Welcome back, Henning!</h2>
       <div class="welcome">
       <section class="counter-thingy">
-      <img src="/images/cow-face-front.svg" class="counter-icon" alt="Cow">
+      <img src="images/cow-face-front.svg" class="counter-icon" alt="Cow">
       <p>29</p>
       </section>
-      <img src="/images/henning.jpg" class="profilePicture" alt="Henning">
+      <img src="images/henning.jpg" class="profilePicture" alt="Henning">
       <section class="counter-thingy">
-      <img src="/images/SVG_Trophy_Star.svg" class="counter-icon" alt="Trophy">
+      <img src="images/SVG_Trophy_Star.svg" class="counter-icon" alt="Trophy">
       <p>14</p>
       </section>
       </div>
