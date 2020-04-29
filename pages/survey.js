@@ -51,27 +51,27 @@ export default class SurveyPage {
       
     <div class="progressBar">
     <figure>
-    <img src="../images/cowicon.png">
+    <img src="images/cowicon.png">
     </figure>
 
     <figure>
-    <img src="../images/tractoricon.png">
+    <img src="images/tractoricon.png">
     </figure>
 
     <figure>
-    <img src="../images/farmicon.png">
+    <img src="images/farmicon.png">
     </figure>
 
     <figure>
-    <img src="../images/rainicon.png">
+    <img src="images/rainicon.png">
     </figure>
 
     <figure>
-    <img src="../images/energyicon.png">
+    <img src="images/energyicon.png">
     </figure>
 
     <figure>
-    <img src="../images/plantsicon.png">
+    <img src="images/plantsicon.png">
     </figure>
     </div> 
 

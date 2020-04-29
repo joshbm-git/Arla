@@ -10,12 +10,12 @@
 /* ---------- general styling ---------- */
 @font-face {
   font-family: Arla;
-  src: url(../fonts/ArlaIF_W_Rg.woff);
+  src: url(./fonts/ArlaIF_W_Rg.woff);
 }
 
 @font-face {
   font-family: ArlaBold;
-  src: url(../fonts/ArlaIF_W_Bd.woff);
+  src: url(./fonts/ArlaIF_W_Bd.woff);
 }
 
 * {
