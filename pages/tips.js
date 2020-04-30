@@ -6,7 +6,7 @@ export default class TipsPage {
   template() {
     document.getElementById("content").innerHTML += /*html*/ `
           <section id="tips" class="page">
-            <h1>Here's how you can decrease CO2 emission!</h1>
+            <h2>Here's how you can decrease CO2 emission!</h2>
             <div id="tipsInfo">
             
             <div class="tipsWrapper">
@@ -43,7 +43,7 @@ export default class TipsPage {
             
             <div class="tipsWrapper">
             
-<img src="/images/animalwelfare.png" alt="">
+<img src="images/animalwelfare.png" alt="">
             <p><strong>Animal welfare</strong><br><br>As the cow doesn’t produce milk the first two years of its life, the total emissions per kilo of milk during its lifetime are reduced the longer it lives and the more milk it produces. It is a proven fact that better animal welfare improves a cow's milk yield and life-span.</p>
             </div>
             </div>
@@ -59,7 +59,7 @@ export default class TipsPage {
             
             <div class="tipsWrapper">
             
-<img src="/images/carbon.png" alt="">
+<img src="images/carbon.png" alt="">
             <p><strong>Carbon sequestration</strong><br><br>Carbon sequestration (capturing and storing carbon in the soil) can increase, particularly when growing grass and using manure.</p>
             </div>
             </div>

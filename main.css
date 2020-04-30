@@ -44,7 +44,8 @@ h1 {
 h2 {
   font-size: 2em;
   font-family: ArlaBold, sans-serif;
-  padding-top: 1em;
+  padding-top: 2em;
+  margin: 0;
 }
 
 h3 {
@@ -117,7 +118,7 @@ p {
 .page {
   display: none;
   /*min heigh is screen heigh minus height of tab and top bar */
-  min-height: calc(100vh - 110px);
+  min-height: 100vh;
   background: #eff2f0;
   animation: fadeIn 0.4s;
 }
@@ -509,14 +510,9 @@ h1 {
 
 /* ---------- Joshua CSS ---------- */
 
-#charts h2 {
-  padding-top: 2em;
-}
-
 #chartsInner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 7.5em;
 }
 .chart-container {
   position: relative;
@@ -532,7 +528,6 @@ h1 {
 @media (max-width: 768px) {
   #chartsInner {
     display: block;
-    padding: 3em;
   }
 }
 
